@@ -7,9 +7,6 @@
           <router-link to="/coaches">All Coaches</router-link>
         </li>
         <li>
-          <router-link to="/register">Register as a Coach</router-link>
-        </li>
-        <li>
           <router-link to="/requests">Requests</router-link>
         </li>
       </ul>
