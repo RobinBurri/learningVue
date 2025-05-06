@@ -3,8 +3,8 @@
   <BaseCard>
     <div>
       <div class="controls">
-        <button>Refresh</button>
-        <router-link to="/register">Register as Coach</router-link>
+        <BaseButton mode="outline">Refresh</BaseButton>
+        <BaseButton mode="flat" to="/register" link>Register as Coach</BaseButton>
       </div>
       <p v-if="!coachStore.hasCoaches">No coaches found</p>
       <ul v-else>

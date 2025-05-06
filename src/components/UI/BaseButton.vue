@@ -13,7 +13,7 @@ const {
   to = '/',
   mode = '',
 } = defineProps<{
-  link?: string
+  link?: boolean
   to?: string
   mode?: 'flat' | 'outline' | ''
 }>()

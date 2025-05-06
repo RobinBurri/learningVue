@@ -11,8 +11,8 @@
       ></BaseBadge>
     </div>
     <div class="actions">
-      <BaseButton :to="coachContactLink" mode="flat">Contact</BaseButton>
-      <BaseButton :to="coachDetailsLink" mode="outline">View Details</BaseButton>
+      <BaseButton link :to="coachContactLink" mode="flat">Contact</BaseButton>
+      <BaseButton link :to="coachDetailsLink" mode="outline">View Details</BaseButton>
     </div>
   </li>
 </template>
