@@ -7,9 +7,9 @@
     </div>
     <p v-if="!coachStore.hasCoaches">No coaches found</p>
     <ul v-else>
-      <li v-for="coach in filteredCoaches" :key="coach.id">
+      <CoachItem v-for="coach in filteredCoaches" :key="coach.id" :coach="coach">
         {{ coach.firstName }} {{ coach.lastName }}
-      </li>
+      </CoachItem>
     </ul>
   </div>
 </template>
@@ -17,6 +17,7 @@
 <script lang="ts" setup>
 import { useCoachStore } from '@/stores/coach'
 import { computed } from 'vue'
+import CoachItem from '@/components/coaches/CoachItem.vue'
 
 const coachStore = useCoachStore()
 
@@ -27,4 +28,15 @@ const filteredCoaches = computed(() => {
 coachStore.getCoaches()
 </script>
 
-<style scoped></style>
+<style scoped>
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+</style>

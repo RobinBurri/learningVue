@@ -13,6 +13,5 @@ export const useCoachStore = defineStore('coach', () => {
   const hasCoaches = computed(() => {
     return coaches.value && coaches.value.length > 0
   })
-
   return { getCoaches, coaches, hasCoaches }
 })
