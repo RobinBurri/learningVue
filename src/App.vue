@@ -14,10 +14,11 @@ import TheHeader from './components/layout/TheHeader.vue'
   --color-primary: #008e4f;
   --color-primary-light: #00b36d;
   --color-primary-dark: #006a3d;
-  --color-accent: #ff2058;
-  --color-accent-light: #ff4c7f;
-  --color-accent-dark: #c7003a;
+  --color-accent: #73d2de;
+  --color-accent-light: #ffdbb5;
+  --color-accent-dark: #e56b70;
   --color-white: #ffffff;
+  --color-black: #000000;
 }
 
 * {

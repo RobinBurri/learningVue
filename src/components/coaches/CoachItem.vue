@@ -3,11 +3,16 @@
     <h3>{{ fullName }}</h3>
     <h4>${{ props.coach.hourlyRate }} / hour</h4>
     <div>
-      <span v-for="area in props.coach.areas" :key="area">{{ area }}</span>
+      <BaseBadge
+        v-for="area in props.coach.areas"
+        :key="area"
+        :text="area"
+        :type="area"
+      ></BaseBadge>
     </div>
     <div class="actions">
-      <router-link :to="coachContactLink">Contact</router-link>
-      <router-link :to="coachDetailsLink">View Details</router-link>
+      <BaseButton :to="coachContactLink" mode="flat">Contact</BaseButton>
+      <BaseButton :to="coachDetailsLink" mode="outline">View Details</BaseButton>
     </div>
   </li>
 </template>
@@ -38,9 +43,9 @@ const coachDetailsLink = computed(() => {
 <style scoped>
 li {
   margin: 1rem 0;
-  border: 1px solid var(--color-primary-dark);
   border-radius: 12px;
   padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 }
 
 h3 {
@@ -57,6 +62,7 @@ div {
 }
 
 .actions {
+  margin-top: 2rem;
   display: flex;
   justify-content: flex-end;
 }
