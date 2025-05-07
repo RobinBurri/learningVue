@@ -46,8 +46,10 @@ import { useCoachStore } from '@/stores/coach'
 import { ref } from 'vue'
 import BaseButton from '../UI/BaseButton.vue'
 import type { Coach } from '@/data/types'
+import { useRouter } from 'vue-router'
 
 const coachStore = useCoachStore()
+const router = useRouter()
 
 const newCoach = ref({
   firstName: '',
@@ -67,6 +69,9 @@ const submitForm = () => {
     areas: newCoach.value.areas,
   }
   coachStore.addCoach(coachData)
+  router.push({
+    path: '/coaches',
+  })
 }
 </script>
 
