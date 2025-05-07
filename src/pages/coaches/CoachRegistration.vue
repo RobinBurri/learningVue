@@ -1,7 +1,9 @@
 <template>
-  <div>REGISTRATION</div>
+  <coach-form />
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import CoachForm from '@/components/coaches/CoachForm.vue'
+</script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>
