@@ -16,7 +16,7 @@ export const useCoachStore = defineStore('coach', () => {
 
   function addCoach(coach: Coach) {
     const newCoach = {
-      id: Math.random().toString(),
+      id: coach.id,
       firstName: coach.firstName,
       lastName: coach.lastName,
       areas: coach.areas,

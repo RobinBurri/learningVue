@@ -1,7 +1,7 @@
 <template>
   <li>
     <h3>{{ fullName }}</h3>
-    <h4>${{ formatCurrency(props.coach.hourlyRate, 'USD') }} / hour</h4>
+    <h4>{{ formatCurrency(props.coach.hourlyRate, 'USD') }} / hour</h4>
     <div>
       <BaseBadge
         v-for="area in props.coach.areas"

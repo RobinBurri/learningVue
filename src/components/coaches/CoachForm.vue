@@ -1,6 +1,6 @@
 <template>
   <base-card>
-    <form class="form-container">
+    <form class="form-container" @submit.prevent="submitForm">
       <div class="form-control">
         <label for="firstName">First Name</label>
         <input type="text" id="firstName" v-model.trim="newCoach.firstName" />
@@ -42,16 +42,32 @@
 </template>
 
 <script lang="ts" setup>
+import { useCoachStore } from '@/stores/coach'
 import { ref } from 'vue'
 import BaseButton from '../UI/BaseButton.vue'
+import type { Coach } from '@/data/types'
+
+const coachStore = useCoachStore()
 
 const newCoach = ref({
   firstName: '',
   lastName: '',
   description: '',
-  rate: null,
+  rate: 0,
   areas: [],
 })
+
+const submitForm = () => {
+  const coachData: Coach = {
+    id: Math.random().toString(),
+    firstName: newCoach.value.firstName,
+    lastName: newCoach.value.lastName,
+    description: newCoach.value.description,
+    hourlyRate: newCoach.value.rate,
+    areas: newCoach.value.areas,
+  }
+  coachStore.addCoach(coachData)
+}
 </script>
 
 <style scoped>
