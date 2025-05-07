@@ -25,9 +25,11 @@ const classes = computed(() => {
 .badge {
   color: var(--color-black);
   border-radius: 30px;
-  padding: 0.5rem 1.5rem;
+  padding: 0.3rem 1.2rem;
   display: inline-block;
   margin-right: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
 .frontend {
